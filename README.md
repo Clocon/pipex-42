@@ -40,6 +40,6 @@ This will output the number of lines in **file.txt** to **out.txt**.
 ### Links to my other projects at 42:
 
 - **[Main Page](../README.md)**
-- **[libft](/libft-42)**
+- **[libft](../libft-42)**
 - **[ft_printf](/ft_printf)**
 - **[get_next_line](/get_next_line)**
