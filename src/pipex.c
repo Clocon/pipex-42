@@ -6,11 +6,11 @@
 /*   By: lumorale <lumorale@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:06:41 by lumorale          #+#    #+#             */
-/*   Updated: 2023/03/14 17:26:58 by lumorale         ###   ########.fr       */
+/*   Updated: 2023/03/30 17:37:58 by lumorale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../includes/pipex.h"
 
 static char	*find_path(char **envp)
 {

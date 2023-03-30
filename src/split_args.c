@@ -6,11 +6,11 @@
 /*   By: lumorale <lumorale@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 16:14:40 by lumorale          #+#    #+#             */
-/*   Updated: 2023/03/10 18:09:22 by lumorale         ###   ########.fr       */
+/*   Updated: 2023/03/30 17:34:49 by lumorale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../includes/pipex.h"
 
 static int	word_counter(char *str, char c)
 {

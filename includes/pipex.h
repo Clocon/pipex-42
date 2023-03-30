@@ -6,7 +6,7 @@
 /*   By: lumorale <lumorale@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:46:02 by lumorale          #+#    #+#             */
-/*   Updated: 2023/03/13 12:34:44 by lumorale         ###   ########.fr       */
+/*   Updated: 2023/03/30 17:38:54 by lumorale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define PIPEX_H
 
 /*to libft functions*/
-# include "./libft/libft.h"
+# include "../libft/includes/libft.h"
+# include "../ft_printf/includes/ft_printf.h"
 
 /* to write, read, close, access, pipe, dup, dup2, execve, fork */
 # include <unistd.h>
