@@ -44,3 +44,4 @@ This will output the number of lines in **file.txt** to **out.txt**.
 - **[ft_printf](../../../ft_printf-42)**
 - **[get_next_line](../../../get_next_line-42)**
 - **[push_swap](../../../push_swap-42)**
+- **[so_long](../../../so_long-42)**
