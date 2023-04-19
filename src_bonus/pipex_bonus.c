@@ -6,7 +6,7 @@
 /*   By: lumorale <lumorale@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:06:41 by lumorale          #+#    #+#             */
-/*   Updated: 2023/04/18 19:30:38 by lumorale         ###   ########.fr       */
+/*   Updated: 2023/04/19 11:35:09 by lumorale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,12 @@ static void	pipes_generator(t_pipex *pipex)
 static void	child_generator(t_pipex *pipex, char **str, char **envp, int n_pipe)
 {
 	int		i;
-	pipes_generator(pipex);
 
+	pipes_generator(pipex);
 	i = -1;
 	while (++i < n_pipe)
 		child(*pipex, str, envp, i);
 	free_arr_int(pipex);
-	//free(pipex->pid);
 }
 
 void leaks(void)
@@ -63,8 +62,8 @@ int	main(int argc, char **str, char **envp)
 	atexit(leaks);
 	t_pipex	pipex;
 
-/* 	if (argc != 5)
-		argc_error(ARGC_ERROR); */
+	if (argc < 5)
+		argc_error(ARGC_ERROR);
 	pipex.fd_in = open(str[1], O_RDONLY);
 	if (pipex.fd_in < 0)
 		err_msg(INFILE_ERROR);
@@ -72,14 +71,8 @@ int	main(int argc, char **str, char **envp)
 	if (pipex.fd_out < 0)
 		err_msg_exit(OUTFILE_ERROR);
 	pipex.n_pipes = argc - 3;
-/* 	if (pipe(pipex.tube) < 0)
-		err_msg(PIPE_ERROR); */
 	pipex.paths = ft_split(find_path(envp), ':');
-	//pipex.pid = fork();
-	//if (pipex.pid == 0)
-	//	first_child(&pipex, str, envp);
-		child_generator(&pipex, str, envp, argc - 3);
-	//second_child(&pipex, str, envp);
+	child_generator(&pipex, str, envp, argc - 3);
 	wait(&pipex.towait);
 	total_close(&pipex);
 	free_matrix(pipex.paths);
