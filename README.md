@@ -45,3 +45,4 @@ This will output the number of lines in **file.txt** to **out.txt**.
 - **[get_next_line](../../../get_next_line-42)**
 - **[push_swap](../../../push_swap-42)**
 - **[so_long](../../../so_long-42)**
+- **[philosophers](../../../philosophers-42)**
